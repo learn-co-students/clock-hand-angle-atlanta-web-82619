@@ -11,6 +11,6 @@ def clock_angle(time)
     hour_angle = (hour + (minute / 60)) * 30
     minute_angle = minute * 6
 
-    ret = (minute_angle - hour_angle).abs
-    ret > 180 ? ret %= 180 : ret
+    diff = (minute_angle - hour_angle).abs
+    diff > 180 ? diff - 180 : diff
 end
