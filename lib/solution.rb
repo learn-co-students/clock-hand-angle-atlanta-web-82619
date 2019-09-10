@@ -8,9 +8,7 @@ def clock_angle(time)
         hour = time[0].to_i
         minute = time[2..3].to_i
     end
-    if hour == 12
-        hour = 0
-    end
+    hour %= 12
 
     hour_angle = ((hour + (minute / 60.0)) / 12.0) * 360
 
